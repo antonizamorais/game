@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Define a codificação de caracteres para suportar acentuação -->
+    <meta charset="UTF-8">
+    <!-- Define a configuração para o layout responsivo em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra, Papel e Tesoura</title>
+    <!-- Importa o arquivo CSS para estilização -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+         <!-- Área da esquerda -->
+        <div class="left-side">
+            <h1>Bem-Vindo ao Jogo: Pedra, Papel e Tesoura</h1>
+            <h2>Seu oponente será o Computador</h2>
+            <h2>Escolha sua jogada</h2>
+            <div class="options">
+                <button class="shakePlayer" onclick="jogar('pedra')">
+                    <img src="pedra.png" alt="Pedra">
+                    Pedra
+                </button>
+                <button class="shakePlayer" onclick="jogar('papel')">
+                    <img src="papel.png" alt="Papel">
+                    Papel
+                </button>
+                <button class="shakePlayer" onclick="jogar('tesoura')">
+                    <img src="tesoura.png" alt="Tesoura">
+                    Tesoura
+                </button>
+            </div>
+        </div>
+    
+        <!-- Área da direita -->
+        <div class="right-side">
+            <div class="game-board">
+                <div class="player-choice">
+                    <h2>Você</h2>
+                    <img id="img-maoJogador" src="pedra.png" alt="Pedra">
+                    <img id="img-jogador" src="" alt="Escolha do Jogador" style="display:none;">
+                </div>
+                <div class="computer-choice">
+                    <h2>Computador</h2>
+                    <img id="img-maoComputador" src="pedra.png" alt="Pedra">
+                    <img id="img-computador" src="" alt="Escolha do Computador" style="display:none;">
+                </div>
+            </div>
+    
+            <div class="result">
+                <p id="result-text"></p>
+            </div>
+    
+            <div class="points">
+                <p class="total-games">Empate </p>
+                <div class="score-container">
+                    <div class="player-name">Você</div>
+                    <div class="center-box" id="player-score">0</div>
+                    <div class="center-box" id="draw-score">0</div>
+                    <div class="center-box" id="computer-score">0</div>
+                    <div class="player-name">Computador</div>
+                </div>
+                <p class="total-games">Total de Jogadas: <span id="total-games">0</span></p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Importa o script JavaScript que controla a lógica do jogo -->
+    <script src="script.js"></script>
+</body>
+</html>

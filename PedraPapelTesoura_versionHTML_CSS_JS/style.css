@@ -1,0 +1,197 @@
+/* Estilo para os botões de opções */
+.options {
+    display: flex; /* Coloca os botões lado a lado */
+    justify-content: center; /* Alinha os botões ao centro */
+    gap: 20px; /* Adiciona um espaço entre os botões */
+    flex: 1; /* Ocupa um espaço proporcional */
+    max-width: 40%; /* Garante que fique entre 30% e 40% da tela */
+    align-items: center;
+}
+
+.options button {
+    background: none;
+    color: #fff; /* Define a cor do texto dos botões como branca */
+    font-family: "Poppins", sans-serif; /* Define a fonte do texto */
+    border: 1px solid #fff; /* Adiciona uma borda branca */
+    padding: 1em;
+    border-radius: 7px; /* Borda arredondada */
+    width: 150px;
+    height: 150px; /* Define uma altura fixa para os botões */
+    white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+    cursor: pointer; /* Muda o cursor ao passar sobre os botões */
+    outline: none;
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo em coluna (imagem em cima e nome embaixo) */
+    align-items: center; /* Centraliza o conteúdo dentro do botão */
+    justify-content: center; /* Garante que o conteúdo fique centralizado */
+    transition: 0.2s all linear; /* Suaviza mudanças de estilo */
+}
+
+.options button img {
+    width: 80px; /* Define o tamanho das imagens dos botões */
+    height: 80px;
+    margin-bottom: 10px; /* Espaço entre a imagem e o nome */
+}
+
+/* Estilo para o layout da página */
+body {
+    background-color: #2c3e50; /* Cor de fundo da página */
+    font-family: 'Arial', sans-serif; /* Define a fonte principal */
+    color: #fff; /* Define a cor do texto como branca */
+    display: flex;
+    justify-content: center; /* Centraliza os elementos na horizontal */
+    align-items: center; /* Centraliza os elementos na vertical */
+    min-height: 100vh; /* Permite que o conteúdo ultrapasse a tela se necessário */
+    margin: 0;
+}
+
+.container {
+    text-align: center; /* Centraliza o conteúdo */
+    display: flex; /* Ativa o flexbox para dividir a tela */
+    justify-content: space-between; /* Espaço entre os elementos */
+    align-items: center; /* Alinha verticalmente */
+    height: 100vh; /* Ocupa a tela inteira */
+    padding: 20px; /* Espaçamento interno */
+}
+
+.left-side {
+    flex: 1; /* Ocupa um espaço proporcional */
+    max-width: 40%; /* Ocupa até 40% da tela */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center;
+    justify-content: center;
+}
+
+.left-side h1 {
+    margin-bottom: 20px; /* Espaço entre o título e os botões */
+    text-align: center;
+}
+
+/* Área do tabuleiro do jogo */
+.game-board {
+    display: flex;
+    justify-content: space-around; /* Distribui os elementos igualmente */
+    margin-top: 2em; /* Espaçamento superior */
+    gap: 40px;
+}
+
+/* Estiliza as áreas onde as escolhas do jogador e do computador aparecem */
+.player-choice, .computer-choice {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza o conteúdo */
+    justify-content: center;
+}
+
+/* Estiliza as imagens das escolhas */
+img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Mantém a proporção da imagem */
+    margin-bottom: 10px; /* Espaço abaixo da imagem */
+}
+
+/* Estilo para os títulos das escolhas */
+h2 {
+    font-size: 1.2em;
+}
+
+/* Animação de sacudida para o computador */
+@keyframes shakeComputer {
+    0% { transform: translateX(0); } /* Começa na posição original */
+    25% { transform: translateX(-5px); } /* Move 5px para a esquerda */
+    50% { transform: translateX(5px); } /* Move 5px para a direita */
+    75% { transform: translateX(-5px); } /* Move 5px para a esquerda novamente */
+    100% { transform: translateX(0); } /* Retorna à posição original */
+}
+
+/* Animação de sacudida para o jogador */
+@keyframes shakePlayer {
+    0% { transform: translateX(0); } /* Começa na posição original */
+    25% { transform: translateX(5px); } /* Move 5px para a direita */
+    50% { transform: translateX(-5px); } /* Move 5px para a esquerda */
+    75% { transform: translateX(5px); } /* Move 5px para a direita novamente */
+    100% { transform: translateX(0); } /* Retorna à posição original */
+}
+
+/* Estiliza a área de resultado */
+.result {
+    margin-top: 2em;
+    font-size: 1.5em;
+}
+
+/* Adiciona animação de sacudida aos elementos */
+.shakePlayer {
+    animation: shakePlayer 0.8s linear;
+}
+
+.shakeComputer {
+    animation: shakeComputer 0.8s linear;
+}
+
+#img-maoJogador, #img-jogador{
+    transform: scaleX(-1); /* Inverte a imagem horizontalmente */
+}
+
+/* Estilo para o placar aprimorado */
+.points {
+    display: flex; /* Usa flexbox para organização */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    background: linear-gradient(to bottom, #381ec9, #3c108d); /* Gradiente azul*/
+    border-radius: 30px; /* Bordas arredondadas */
+    padding: 15px; /* Espaçamento interno */
+    width: 400px; /* Tamanho ajustado para caber os novos elementos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Sombra */
+    margin: 20px auto; /* Centraliza o placar */
+}
+
+/* Contêiner interno para organizar os elementos do placar */
+/* Ajusta o contêiner do placar para garantir alinhamento */
+.score-container {
+    display: flex; /* Usa flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-around; /* Distribui melhor os elementos */
+    width: 100%;
+}
+
+/* Ajusta os nomes "Você" e "Computador" */
+.player-name {
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    width: 100px; /* Aumenta a largura para manter a proporção */
+    text-align: center;
+}
+
+/* Caixa central para exibição dos pontos */
+.center-box {
+    width: 60px; /* Reduzido para acomodar os novos elementos */
+    height: 40px;
+    background: #333;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* Texto informando o total de jogadas */
+.total-games {
+    color: white;
+    font-size: 1em;
+    margin-top: 10px;
+    font-weight: bold
+}
+
+.right-side {
+    flex: 2; /* Ocupa o restante da tela */
+    max-width: 60%;
+    display: flex;
+    flex-direction: column; /* Organiza os elementos na vertical */
+    align-items: center;
+    justify-content: center;
+}
