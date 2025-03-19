@@ -1,0 +1,4 @@
+Função determinar_vencedor: Determina quem venceu com base nas escolhas do jogador e do computador.
+Função jogar: Recebe a escolha do jogador, gera a escolha do computador aleatoriamente e exibe o resultado. Além disso, a função altera as imagens das mãos do jogador e do computador.
+Interface Gráfica:
+Usando tkinter, criamos uma janela com instruções, botões para o jogador escolher entre Pedra, Papel e Tesoura, e labels para mostrar as imagens e os resultados.
