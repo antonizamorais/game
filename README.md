@@ -17,21 +17,8 @@ Neste repositório, você encontrará jogos feitos com as seguintes linguagens e
 
 - Python
 - JavaScript (HTML5, Canvas)
-- C#
-- Lua
-- E mais…
-
-## 🌱 Como contribuir
-
-Quer ajudar a expandir este repositório? Sinta-se à vontade para contribuir! Você pode:
-
-1. Criar novos jogos usando outras linguagens
-2. Melhorar os jogos existentes
-3. Adicionar ideias e sugestões nos *issues*
-
-## 📚 Licença
-
-Este projeto está licenciado sob a Licença MIT. Sinta-se à vontade para usar, modificar e distribuir!
+- C++
+- E muito mais
 
 ---
 
